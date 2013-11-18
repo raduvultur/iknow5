@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 //mongoose.connect('mongodb://localhost/contacts_database');
-mongoose.connect('mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/contacts_database');
+//mongoose.connect('mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/contacts_database');
+mongoose.connect('mongodb:$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/$OPENSHIFT_APP_NAME');
 
 var contactSchema = mongoose.Schema({ firstname: 'string', lastname: 'string', age: 'number' });
 var Contact = mongoose.model('Contact', contactSchema);
