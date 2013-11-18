@@ -32,7 +32,8 @@ app.delete('/api/contacts/:id', api.destroyContact);
 
 app.get('*', routes.index);
 
-var myport = process.env.OPENSHIFT_INTERNAL_PORT || process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8080;
+//var myport = process.env.OPENSHIFT_INTERNAL_PORT || process.env.PORT || 8080;
+var myport = process.env.PORT || 8080;
 app.listen(myport, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
