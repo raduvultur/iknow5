@@ -4,7 +4,7 @@ html(ng-app="myApp")
     meta(charset='utf8')
     base(href='/')
     title IKnow5
-    link(rel='stylesheet', href='/css/bootstrap.css')
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/app.css')
   body
     div.navbar.navbar-fixed-top
@@ -14,7 +14,7 @@ html(ng-app="myApp")
 
     div.container
       div.row
-        div.span12
+        div.col-md-12
           div(ng-controller='MainCtrl')
             ng-view
 
